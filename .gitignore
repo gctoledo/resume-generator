@@ -5,6 +5,5 @@ __pycache__/
 .relatorio*
 output/
 relatorios/
-dist/
 build/
 *.spec
