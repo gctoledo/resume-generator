@@ -42,6 +42,22 @@ python run.py
 
 3. O relatório será gerado na pasta `relatorios/` e aberto automaticamente.
 
+### Ou, se preferir, gere um executável
+
+1. Instale Pyinstaller:
+
+```bash
+pip install pyinstaller
+```
+
+2. Rode o comando na pasta raiz do projeto:
+
+```bash
+pyinstaller --onefile --noconsole --name="GeradorDeRelatorios" run.py 
+```
+
+3. Rode o arquivo .exe gerado na pasta `dist/`
+
 ---
 
 ## 📁 Estrutura do projeto
