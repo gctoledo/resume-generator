@@ -14,10 +14,10 @@ def main():
 
     base_name = input_path.stem
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-    output_path = Path("reports") / f"Report-{base_name}-{timestamp}.xlsx"
+    output_path = Path("relatorios") / f"Relatorio-{base_name}-{timestamp}.xlsx"
 
     save_dataframe_to_excel(final_table, output_path)
-    print(f"Report generated at: {output_path}")
+    print(f"Relatório gerado com sucesso em: {output_path}")
     os.startfile(output_path)
 
 if __name__ == "__main__":
