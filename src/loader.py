@@ -1,4 +1,3 @@
-# src/loader.py
 from pathlib import Path
 import pandas as pd
 from tkinter import Tk, filedialog
