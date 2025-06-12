@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.relatorio*
+output/
+relatorios/
+dist/
+build/
+*.spec
