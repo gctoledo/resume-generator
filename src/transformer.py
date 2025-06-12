@@ -7,6 +7,10 @@ MONTHS_PT = {
 }
 
 def transform_sales_data(df: pd.DataFrame) -> tuple[pd.DataFrame, list]:
+    df = df.dropna(subset=["Data"]).copy()
+
+    df["Data"] = pd.to_datetime(df["Data"], dayfirst=True)
+
     df["Valor da Venda"] = (
         df["Valor da Venda"]
         .astype(str)
@@ -18,7 +22,6 @@ def transform_sales_data(df: pd.DataFrame) -> tuple[pd.DataFrame, list]:
 
     df["MesAno"] = df["Data"].dt.to_period("M").dt.to_timestamp()
     df["NomeMes"] = df["Data"].dt.month.map(MONTHS_PT)
-
 
     official_names = df.groupby("Cód Cliente")["Cliente"].first()
     grouped = (
